@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+/*weight*/
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+.login_container{
+    background-color: $AzulTreea;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.login_inputs{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 21px 0px 0px;
+    gap: 3rem;
+    box-shadow: 7px 0px 20px 0px rgba(0, 0, 0, 0.25);
+
+    img{
+        width: 126px;
+    }
+
+}
+
+
+.CTA-login{
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h1{
+        font-family: $FontTitulo;
+        font-size: 25px;
+        color: $AzulTreea;
+
+    strong{
+        font-weight: $FontResaltTitulo;
+    }
+    }
+
+    h2{
+        font-family: $FontTitulo;
+        font-size: 15px;  
+        color: $AzulSubtitulos;
+    }
+    
+}
+
+.bannerLogin{
+    background-image: url('https://i.postimg.cc/x1YSXsJC/Group-201.png');
+    background-size : contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+}
+
+
+//input styles
+
+.form-login{ 
+    position:relative; 
+    margin-bottom:45px; 
+  
+  input         {
+    font-size:12px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid $GrisClaro;
+  }
+  input:focus     { outline:none; }
+  
+  /* LABEL ======================================= */
+  label          {
+    color:$GrisClaro; 
+    font-size:14px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label    {
+    top:-20px;
+    font-size:14px;
+    color: $VerdeTreea;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar-login  { position:relative; display:block; width:300px; }
+  .bar-login:before, .bar-login:after   {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:$VerdeTreea; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar-login:before {
+    left:50%;
+  }
+  .bar-login:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar-login:before, input:focus ~ .bar-login:after {
+    width:50%;
+  }
+  
+  /* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:$VerdeTreea; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:$VerdeTreea; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:$VerdeTreea; }
+  to  { width:0; background:transparent; }
+}
+  
+
+}
+.pasword_options{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    input{
+        width: auto;
+        margin-right: 5px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    div{
+        display: flex;
+    }
+
+    button{
+        color: $AzulTreea;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        &:hover{
+          color: $AzulSubtitulos;
+        }
+    }
+}
+
+.button-submit{
+    width: 100%;
+    height: 30px;
+    background-color: $AzulTreea;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: $FontParrafo2;
+    font-weight: 300;
+    color: $blanco;
+    margin-top: 3rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #3B86B9;
+        font-weight: 500;
+    }
+}

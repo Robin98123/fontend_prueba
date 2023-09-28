@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+$h1: 25px;
+$h2: 15px;
+$p: 12px;
+
+/*weight*/
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+
+
+.Modal-container-restablecer{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(9, 54, 85, 0.80);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 4rem;
+    z-index: 10;
+
+    .main-container-restablecer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.tittle-container-restablecer{
+    background-color: $AzulTreea;
+    font-family: $FontParrafo1;
+    font-size: 8px;
+    color: $blanco;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+
+    
+}
+
+.form-container-restablecer{
+    padding: 3rem;
+    background-color: $blanco;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+    
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form-restablecer{ 
+    position:relative; 
+    margin-bottom:45px; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  
+  input         {
+    font-size:12px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:250px;
+    border:none;
+    border-bottom:1px solid $GrisClaro;
+  }
+  input:focus     { outline:none; }
+  
+  /* LABEL ======================================= */
+  label          {
+    color:$GrisClaro; 
+    font-size:14px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label    {
+    top:-20px;
+    font-size:14px;
+    color: $VerdeTreea;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar-restablecer  { position:relative; display:block; width:250px;}
+  .bar-restablecer:before, .bar-restablecer:after   {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:$VerdeTreea; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar-restablecer:before {
+    left:50%;
+  }
+  .bar-restablecer:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar-restablecer:before, input:focus ~ .bar-restablecer:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight-restablecer {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight-restablecer {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from { background:$VerdeTreea; }
+    to  { width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+    from { background:$VerdeTreea; }
+    to  { width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+    from { background:$VerdeTreea; }
+    to  { width:0; background:transparent; }
+}
+
+}
+
+.sumbit-button-restablecer{
+
+    input{
+    background-color: $AzulTreea;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    font-family: $FontWParrafo1;
+    color: $blanco;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover{
+        font-weight: $FontWTitulo;
+        background-color: $Azuloscuro;
+    }
+    }
+}

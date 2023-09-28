@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+$h1: 20px;
+$h2: 15px;
+$p: 12px;
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+.perfil-container{
+    z-index: 8;
+
+    .perfil-img{
+        width: 50px;
+        height: 50px;
+        padding: 3px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $AzulTreea;
+        outline: 5px solid $blanco;
+        box-shadow: -3px 7px 10px 0px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        margin-left: -20px;
+        margin-top: -8px;
+        z-index: 5;
+    
+        h1{
+            font-family: $FontTitulo;
+            font-weight: $FontTitulo;
+            color: $blanco;
+            font-size: 25px;
+        }
+
+    }
+
+    .desplegable-container{
+
+        z-index: 2;
+        position: relative;
+
+        .desplegable-button{
+            
+            height: 40px;
+            width: 80px;
+            background-color: $AzulTreea;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 0px 10px 10px 0px;
+
+        .icon-desplegable{
+            font-size: 13px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .icon-desplegable:hover{
+            transition: 0.5s;
+            transform:rotate(180deg);
+            
+        }
+
+        .icon-desplegable:active{
+            transform:rotate(180deg);
+            
+        }
+
+
+    }
+    }
+}
+
+.main-userinfo{
+    position: absolute;
+    z-index: 0;
+    background-color: $blanco;
+    padding: 1rem;
+    outline: 1px solid $GrisParrafos;
+    border-radius: 10px;
+    padding-top: 2.5rem;
+    margin-top: -20px;
+    margin-left: -190px;
+    display: block;
+
+
+    .user-info{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $GrisClaro;
+        
+
+        h1{
+        font-family: $FontParrafo1;
+        font-weight: $FontWTitulo;
+        font-size: $h1;
+        color: $AzulTreea;
+        }
+
+        h2{
+            font-family: $FontParrafo1;
+            font-weight: $FontWParrafo1;
+            font-size: $p;
+            color: $AzulTreea;   
+        }
+
+        p{
+            font-family: $FontParrafo1;
+            font-weight: $FontWParrafo1;
+            font-size: $h2;
+            color: $GrisParrafos;
+        }
+
+    }
+
+    .perfil-icon{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $GrisClaro;
+        cursor: pointer;
+
+        span{
+        display: flex;
+        gap: 1rem;
+        }
+    }
+
+    .perfil-icon{
+
+        span{
+            color: $AzulTreea;
+
+            p{
+                font-family: $FontParrafo1;
+                font-weight: $FontWParrafo1;
+            }
+        }
+    }
+
+    .Log-out{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+
+        button{
+            border: none;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-family: $FontParrafo1;
+            font-weight: $FontWParrafo2;
+            font-size: $h2;
+            color: $GrisClaro;
+            cursor: pointer;
+
+            span{
+                font-size: 20px;
+                color: $GrisClaro;
+
+                &:hover{
+                    color: $GrisParrafos;
+                }
+            }
+
+            &:hover{
+                color: $GrisParrafos;
+            }
+        }
+
+        
+    }
+}
+
+.main-userinfo.NoisActive{
+    display: none;
+}

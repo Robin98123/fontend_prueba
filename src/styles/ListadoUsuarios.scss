@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+$h1: 25px;
+$h2: 15px;
+$p: 12px;
+
+/*weight*/
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+.form-container{
+    padding: 2.5rem;
+    background-color: $blanco;
+    box-shadow: 5px 5px 17px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.tittle-button{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+
+
+    h1{
+        font-family: $FontParrafo1;
+        font-weight: $FontWParrafo1;
+        letter-spacing: -1px;
+        font-size: $h1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: $GrisParrafos;
+    }
+
+    span{
+        color: $AzulTreea;
+        font-size: 50px;
+    }
+
+    button{
+        font-family: $FontParrafo1;
+        font-weight: $FontWParrafo1;
+        color: $blanco;
+        background-color: $AzulTreea;
+        border: none;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: rgba(9, 54, 85, 0.80);
+        background-blend-mode: multiply;
+    }
+
+    .icon-add{
+        font-size: 12px;
+    }
+}
+
+.grid-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.flex-form{
+    display: flex;
+    gap: 1rem;
+}

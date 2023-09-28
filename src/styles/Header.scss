@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+$h1: 25px;
+$h2: 15px;
+$p: 12px;
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+
+header{
+
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+
+    .tittle-container{
+        width: 200px;
+        background-color: white;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 0px 35px 35px;
+        padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
+    
+        h1{
+            font-size: 20px;
+            font-weight: 300;
+            color: $AzulSubtitulos;
+
+            strong{
+                font-weight: 500;
+            }
+        }
+    
+    }
+    .nav-container{
+        padding-bottom: 0.5rem;
+        padding-top: 1rem;
+        height: 100%;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+
+        .Logo_menu{
+
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+    
+            img{
+                width: 126px;
+                padding-right: 2rem;
+                border-right: 1px solid $GrisClaro;
+            }
+
+            nav{
+
+                display: flex;
+                gap: 3rem;
+                text-align: center;
+
+                li{
+                    list-style: none;
+                    font-family: $FontParrafo1;
+                    font-weight: $FontWParrafo1;
+                    color: $GrisParrafos;
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+                    padding-bottom: 1.5rem;
+                    margin-bottom: -28px;
+                    text-decoration:none;
+
+                    &:hover{
+                        color: $VerdeTreea;;
+                    }
+
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        width: 0%;
+                        height: 4px;
+                        display: block;
+                        transition: all 0.3s ease;
+                        bottom: 0%;
+                        border-radius: 50px;
+                    }
+    
+                    &:hover::after{
+                        width: 100%;
+                        height: 4px;
+                        background-color: $VerdeTreea;
+
+                        &:active{
+                            width: 100%;
+                        height: 3px;
+                        background-color: $VerdeTreea;
+                        }
+                    }
+                }
+
+                
+
+
+            }
+        }
+    }
+}
+
+.action-buton-container{
+    display: flex;
+    gap: 4rem;
+}
+
+
+Link {
+    text-decoration: none;
+}

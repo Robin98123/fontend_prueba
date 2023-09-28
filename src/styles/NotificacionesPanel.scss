@@ -1,0 +1,456 @@
+/*Colors*/
+
+$VerdeTreea: #95C65A;
+$AzulTreea: #53B6E9;
+$Gristitulos: #626262;
+$AzulSubtitulos: #3B86B9;
+$GrisParrafos: #666666;
+$GrisClaro: #ADADAD;
+$Azuloscuro: #093655;
+$blanco: white;
+
+/*fuentes*/
+
+$FontTitulo: 'Karla', sans-serif;
+$FontParrafo1: 'Karla', sans-serif;
+$FontParrafo2: 'Karla', sans-serif;
+
+$h1: 25px;
+$h2: 16px;
+$p: 13px;
+
+$FontResaltTitulo: 800;
+$FontWTitulo: 700;
+$FontWParrafo1: 500;
+$FontWParrafo2: 300;
+
+
+.button-action_container{
+    display: flex;
+    gap: 2rem;
+}
+
+.icon-Notificacion{
+    color: $AzulTreea;
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+    z-index: 8;
+
+    &:hover{
+        color: $Azuloscuro;
+    }
+
+    .notificacion-span{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: $FontTitulo;
+        font-size: 10px;
+        font-weight:  $FontWTitulo;
+        color: $blanco;
+        background-color: $Azuloscuro;
+        padding: 3px;
+        border-radius: 50%;
+    }
+
+
+    .notification-tray{
+        background-color: $AzulTreea;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px 9px 0px 0px;
+        border: 1px solid $GrisClaro;
+
+        p{
+            color: $blanco;
+            font-size: $h2;
+            display: flex;
+            align-items: center;
+            font-family: $FontParrafo2;
+            
+        }
+
+        span{
+            margin-right: 1rem;
+            font-size: 20px;
+        }
+    }
+
+    .tray-container{
+        background-color: $blanco;
+        padding: 0.5rem;
+        border-radius: 0px 0px 10px 10px;
+        border: 1px solid $GrisClaro;
+
+        .button-navigation{
+
+            display: flex;
+            gap: 0.5rem;
+
+            button{
+                font-family: $FontWParrafo1;
+                color: $GrisParrafos;
+                outline: 1px solid $GrisParrafos;
+                border-radius: 15px;
+                background-color: transparent;
+                border: none;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: $AzulTreea;
+                color: $blanco;
+                outline: none;
+            }
+
+            button:active{
+                background-color: $AzulTreea;
+                color: $blanco;
+                outline: none;
+            }
+        }
+    }
+
+    .tray-card-notification{
+
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $GrisClaro;
+        margin-bottom: 0.5rem;
+
+        div{
+
+            padding-top: 1rem;
+            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-family: $FontParrafo1;
+                font-size: $p;
+                color: $GrisParrafos;
+                text-align: left;
+                line-height: 15px;
+            }
+
+            p:hover{
+                color: $Azuloscuro;
+            }
+
+            span{
+                font-size: 6px;
+                color: $GrisClaro;
+            }
+
+            span:hover{
+                color: #3B86B9;
+                cursor: pointer;
+            }
+        }
+
+    .tray-card_date{
+        color: $GrisClaro;
+        font-family: $FontParrafo1;
+        font-weight: $FontWParrafo1;
+        font-size: 13px;
+        text-align: right;
+        display: flex;
+        justify-content: right;
+        margin-top: 1rem;
+    }
+    }
+
+    .Vaciar-bandeja_button{
+        background-color: $AzulTreea;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: none;
+        border-radius: 9px;
+        font-family: $FontParrafo1;
+        font-weight: $FontWTitulo;
+        color: $blanco;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $Azuloscuro;
+        }
+    }
+
+    .action-container_oculted{
+        display: none;
+    }
+
+}
+
+.notification-tray_container{
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: -12rem;
+    width: 250px;
+    display: block;
+    z-index: 8;
+
+    &.NoisActive{
+        display: none;
+    }
+
+    .notification-tray{
+        background-color: $AzulTreea;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px 9px 0px 0px;
+        border: 1px solid $GrisClaro;
+
+        p{
+            color: $blanco;
+            font-size: $h2;
+            display: flex;
+            align-items: center;
+            font-family: $FontParrafo2;
+            
+        }
+
+        span{
+            margin-right: 1rem;
+            font-size: 20px;
+        }
+    }
+
+    .tray-container{
+        background-color: $blanco;
+        padding: 0.5rem;
+        border-radius: 0px 0px 10px 10px;
+        border: 1px solid $GrisClaro;
+
+        .button-navigation{
+
+            display: flex;
+            gap: 0.5rem;
+
+            button{
+                font-family: $FontWParrafo1;
+                color: $GrisParrafos;
+                outline: 1px solid $GrisParrafos;
+                border-radius: 15px;
+                background-color: transparent;
+                border: none;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: $AzulTreea;
+                color: $blanco;
+                outline: none;
+            }
+
+            button:active{
+                background-color: $AzulTreea;
+                color: $blanco;
+                outline: none;
+            }
+        }
+    }
+
+    .tray-card-notification{
+
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $GrisClaro;
+        margin-bottom: 0.5rem;
+
+        div{
+
+            padding-top: 1rem;
+            gap: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-family: $FontParrafo1;
+                font-size: $p;
+                color: $GrisParrafos;
+                text-align: left;
+                line-height: 15px;
+            }
+
+            p:hover{
+                color: $Azuloscuro;
+            }
+
+            span{
+                font-size: 6px;
+                color: $GrisClaro;
+            }
+
+            span:hover{
+                color: #3B86B9;
+                cursor: pointer;
+            }
+        }
+
+    .tray-card_date{
+        color: $GrisClaro;
+        font-family: $FontParrafo1;
+        font-weight: $FontWParrafo1;
+        font-size: 13px;
+        text-align: right;
+        display: flex;
+        justify-content: right;
+        margin-top: 1rem;
+    }
+    }
+
+    .Vaciar-bandeja_button{
+        background-color: $AzulTreea;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: none;
+        border-radius: 9px;
+        font-family: $FontParrafo1;
+        font-weight: $FontWTitulo;
+        color: $blanco;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $Azuloscuro;
+        }
+    }
+
+    .action-container_oculted{
+        display: none;
+    }
+}
+
+
+.icon-configuracion{
+    font-size: 24px;
+    color: $AzulTreea;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+
+    &:hover{
+        color: $Azuloscuro;
+    }
+
+}
+
+
+.icon-configuration-content{
+    margin-top: 2rem;
+    margin-left: -10rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: block;
+    z-index: 8;
+
+    &.NoisActive{
+        display: none;
+    }
+
+    .confuration-title-content{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        background-color: $AzulTreea;
+        border-radius: 10px 10px 0px 0px;
+        border: 1px solid $GrisClaro;
+    
+
+
+        p{
+            font-family: $FontTitulo;
+            color: $blanco;
+            font-size: $h2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span{
+                font-size: 25px;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .form-container{
+        background-color: $blanco;
+        border-radius: 0px 0px 10px 10px;
+        border: 1px solid $GrisClaro;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+
+            input{
+                background-color: $AzulTreea;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border: none;
+                border-radius: 9px;
+                font-family: $FontParrafo1;
+                font-weight: $FontWTitulo;
+                color: $blanco;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $Azuloscuro;
+                }
+            }
+
+            select{
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+                
+
+                &:hover{
+                    color: $VerdeTreea;
+                    border-bottom: 1px solid $VerdeTreea;
+                }
+
+                &:active{
+                    color: $VerdeTreea;
+                    border-bottom: 1px solid $VerdeTreea;
+                }
+
+                option{
+                    color: $AzulTreea;
+                    background-color: $blanco;
+                    font-family: $FontParrafo1;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+        }
+    }
+
+    .configuration-content_oculted{
+        display: none;
+    }
+
+}
